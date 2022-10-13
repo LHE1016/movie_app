@@ -1,0 +1,33 @@
+/* Home.css */
+
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.loader{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+}
+
+.movies{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(400px, 1fr)); /* fr: fractional unit(사용가능한 공간에 대한 비율) */ /* 최대 크기일 때 무비들이 1:1 비율 */                                        
+    grid-gap: 100px;
+    padding: 50px;
+    width: 80%;
+    padding-top: 70px;
+}
+
+/* mobile (0~768) */
+@media screen and (max-width: 768px) {
+    .movies{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+}
